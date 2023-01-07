@@ -1,8 +1,14 @@
-let array = [1, 2, 3, 4, 5];
-let newMas = [];
-newMas[0] = array[0];
-newMas[1] = array[array.length - 1];
-array = newMas;
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Change code below this line
+  let member = min;
   
-console.log(array);
-// console.log(lastElement);
+  for (let i = 0; i <= max - min; i += 1) {
+    numbers = numbers.push(member);
+    member += 1;
+  }
+  // Change code above this line
+  return numbers;
+}
+
+console.log(createArrayOfNumbers(3, 7));
